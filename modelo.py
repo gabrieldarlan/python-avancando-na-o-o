@@ -53,8 +53,7 @@ class Playlist:
     def listagem(self):
         return self._programas
 
-    @property
-    def tamanho(self):
+    def __len__(self):
         return len(self._programas)
 
 
@@ -81,9 +80,9 @@ playlist_fim_de_semana = Playlist('fim de semna', filmes_e_series)
 
 print('')
 print(f'Tamanho da playlist: {len(playlist_fim_de_semana)}')
-for programa in playlist_fim_de_semana.listagem:
+for programa in playlist_fim_de_semana:
     print(programa)
 
-print(f'Tá ou não tá? {demolidor in playlist_fim_de_semana}')
+len(playlist_fim_de_semana)
 
 print('')
